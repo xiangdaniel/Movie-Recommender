@@ -93,8 +93,8 @@ public class Multiplication {
 		Job job = Job.getInstance(conf);
 		job.setJarByClass(Multiplication.class);
 
-		ChainMapper.addMapper(job, CooccurrenceMapper.class, LongWritable.class, Text.class, Text.class, Text.class, conf);
-		ChainMapper.addMapper(job, RatingMapper.class, Text.class, Text.class, Text.class, Text.class, conf);
+		//ChainMapper.addMapper(job, CooccurrenceMapper.class, LongWritable.class, Text.class, Text.class, Text.class, conf);
+		//ChainMapper.addMapper(job, RatingMapper.class, LongWritable.class, Text.class, Text.class, Text.class, conf);
 
 		job.setMapperClass(CooccurrenceMapper.class);
 		job.setMapperClass(RatingMapper.class);
