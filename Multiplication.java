@@ -6,7 +6,6 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Reducer;
-import org.apache.hadoop.mapreduce.lib.chain.ChainMapper;
 import org.apache.hadoop.mapreduce.lib.input.MultipleInputs;
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
@@ -93,12 +92,8 @@ public class Multiplication {
 		Job job = Job.getInstance(conf);
 		job.setJarByClass(Multiplication.class);
 
-		ChainMapper.addMapper(job, CooccurrenceMapper.class, LongWritable.class, Text.class, Text.class, Text.class, conf);
-		ChainMapper.addMapper(job, RatingMapper.class, Text.class, Text.class, Text.class, Text.class, conf);
-
 		job.setMapperClass(CooccurrenceMapper.class);
 		job.setMapperClass(RatingMapper.class);
-
 		job.setReducerClass(MultiplicationReducer.class);
 
 		job.setMapOutputKeyClass(Text.class);
