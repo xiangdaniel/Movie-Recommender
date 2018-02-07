@@ -3,18 +3,20 @@ In this repository, the goal is to build a recommender system that will predict 
 
 In this topk-database branch, the Item-based Collabrative Filtering Algorithm is implemented with MapReduce and the recommended movies were sorted and written into database.
 
-The terminal command: hadoop jar recommender.jar Driver /input /dataDividedByUser /coOccurrenceMatrix /Normalize /Multiplication /Sum 5
+The terminal command: 
+> hadoop com.sun.tools.javac.Main *.java
 
-#args0: original dataset is /input where you put the Netflix prize data
+> jar cf recommender.jar *.class
 
-#args1: output directory for DividerByUser job
+> hadoop jar recommender.jar Driver /input /dataDividedByUser /coOccurrenceMatrix /Normalize /Multiplication /Sum 5
 
-#args2: output directory for coOccurrenceMatrixBuilder job
+| Command | Description |
+| --- | --- |
+| `#args0: /input` | original dataset directory where you put the Netflix prize data |
+| `#args1: /dataDividedByUser` | output directory for DividerByUser job |
+| `#args2: /coOccurrenceMatrix` | output directory for coOccurrenceMatrixBuilder job |
+| `#args3: /Normalize` | output directory for Normalize job |
+| `#args4: /Multiplication` | output directory for Multiplication job |
+| `#args5: /Sum` | output directory for Sum job |
+| `#args6: 5` | k, the maximum number of recommended movies for each user |
 
-#args3: output directory for Normalize job
-
-#args4: output directory for Multiplication job
-
-#args5: output directory for Sum job
-
-#args6: k, the maximum number of recommended movies in database
