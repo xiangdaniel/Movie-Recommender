@@ -3,7 +3,14 @@ In this repository, the goal is to build a recommender system that will predict 
 
 In this branch, the Item-based Collabrative Filtering Algorithm is implemented with MapReduce and the recommended movies were sorted and written into database.
 
-The terminal command: hadoop jar recommender.jar Driver /input /dataDividedByUser /coOccurrenceMatrix /Normalize /Multiplication /Sum 5
+The terminal command: 
+
+hadoop com.sun.tools.javac.Main *.java
+
+jar cf recommender.jar *.class
+
+hadoop jar recommender.jar Driver /input /dataDividedByUser /coOccurrenceMatrix /Normalize /Multiplication /Sum 5
+
 
 #args0: original dataset is /input where you put the Netflix prize data
 
