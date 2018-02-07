@@ -11,16 +11,12 @@ The terminal command:
 
 > hadoop jar recommender.jar Driver /input /dataDividedByUser /coOccurrenceMatrix /Normalize /Multiplication /Sum 5
 
-*#args0: original dataset directory is /input where you put the Netflix prize data*
-
-*#args1: output directory for DividerByUser job*
-
-*#args2: output directory for coOccurrenceMatrixBuilder job*
-
-*#args3: output directory for Normalize job*
-
-*#args4: output directory for Multiplication job*
-
-*#args5: output directory for Sum job*
-
-*#args6: k, the maximum number of recommended movies in database*
+| Command | Description |
+| --- | --- |
+| `#args0` | original dataset directory is **/input** where you put the Netflix prize data |
+| `#args1` | output directory for DividerByUser job |
+| `#args2` | output directory for coOccurrenceMatrixBuilder job |
+| `#args3` | output directory for Normalize job |
+| `#args4` | output directory for Multiplication job |
+| `#args5` | output directory for Sum job |
+| `#args6` | k, the maximum number of recommended movies in database |
