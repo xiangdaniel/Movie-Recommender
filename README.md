@@ -1,7 +1,7 @@
 # Movie-Recommender
 In this repository, the goal is to build a recommender system that will predict user ratings for films and the datasets are from Netflix Prize data.
 
-In this topk-database branch, the Item-based Collabrative Filtering Algorithm is implemented with MapReduce and the recommended movies were sorted and worte into database.
+In this topk-database branch, the Item-based Collabrative Filtering Algorithm is implemented with MapReduce and the recommended movies were sorted and written into database.
 
 The terminal command: hadoop jar recommender.jar Driver /input /dataDividedByUser /coOccurrenceMatrix /Normalize /Multiplication /Sum 5
 
