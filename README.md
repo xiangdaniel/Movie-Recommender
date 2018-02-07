@@ -19,4 +19,4 @@ The terminal command:
 | `#args3: /Normalize` | output directory for Normalize job |
 | `#args4: /Multiplication` | output directory for Multiplication job |
 | `#args5: /Sum` | output directory for Sum job |
-| `#args6: 5` | k, the maximum number of recommended movies in database |
+| `#args6: 5` | k, the maximum number of recommended movies for each user |
