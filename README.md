@@ -6,7 +6,9 @@ In this branch, the Item-based Collabrative Filtering Algorithm is implemented w
 The terminal command: 
 
 hadoop com.sun.tools.javac.Main *.java
+
 jar cf recommender.jar *.class
+
 hadoop jar recommender.jar Driver /input /dataDividedByUser /coOccurrenceMatrix /Normalize /Multiplication /Sum 5
 
 
