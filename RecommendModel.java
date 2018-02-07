@@ -122,7 +122,8 @@ public class RecommendModel {
                 pairs.add(queue.poll());
             }
 
-            for (int i = queue.size() - 1; i >= 0; i--) {
+            int size = pairs.size();
+            for (int i = size - 1; i >= 0; i--) {
                 Pair pair = pairs.get(i);
                 context.write(new DBOutputWritable(Integer.parseInt(key.toString()), Integer.parseInt(pair.key), pair.value), NullWritable.get());
             }
