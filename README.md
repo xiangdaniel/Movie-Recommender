@@ -5,11 +5,11 @@ In this branch, the Item-based Collabrative Filtering Algorithm is implemented w
 
 The terminal command: 
 
-hadoop com.sun.tools.javac.Main *.java
+> hadoop com.sun.tools.javac.Main *.java
 
-jar cf recommender.jar *.class
+> jar cf recommender.jar *.class
 
-hadoop jar recommender.jar Driver /input /dataDividedByUser /coOccurrenceMatrix /Normalize /Multiplication /Sum 5
+> hadoop jar recommender.jar Driver /input /dataDividedByUser /coOccurrenceMatrix /Normalize /Multiplication /Sum 5
 
 
 #args0: original dataset directory is /input where you put the Netflix prize data
