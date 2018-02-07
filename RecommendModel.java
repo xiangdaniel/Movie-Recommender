@@ -122,7 +122,8 @@ public class RecommendModel {
                 pairs.add(queue.poll());
             }
 
-            for (int i = queue.size() - 1; i >= 0; i--) {
+            int size = pairs.size();
+            for (int i = size - 1; i >= 0; i--) {
                 Pair pair = pairs.get(i);
                 context.write(new DBOutputWritable(Integer.parseInt(key.toString()), Integer.parseInt(pair.key), pair.value), NullWritable.get());
             }
@@ -159,7 +160,7 @@ public class RecommendModel {
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, RecommendModel.RatingMapper.class);
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, RecommendModel.FlagMapper.class);
 
-        DBOutputFormat.setOutput(job, "recommender",
+        DBOutputFormat.setOutput(job, "recommend",
                 new String[] {"user_id", "movie_id", "rating"});
 
         job.waitForCompletion(true);
